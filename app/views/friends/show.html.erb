@@ -1,0 +1,24 @@
+<div class="card">
+  <div class="card-body">
+    <h2>
+      <%= @friend.first_name %>
+      <%= @friend.last_name %>
+    </h2>
+  </div>
+  <div class="card-body">
+      <strong><%= @friend.email %></strong>
+  </div>
+  <div class="card-body">
+      <strong>&#9742;</strong>
+      <%= @friend.phone %>
+  </div>
+  <div class="card-body">
+      <img src='https://lh3.googleusercontent.com/_mpT1mYCaDEkRwrgLx3OWlbPGG8lqFAWho1t-YwofID2UAqMpJE4LQRcHLE01yZkB43nsA=s113' style="width: 30px; height: 30px; object-fit: none;"/>
+      <%= @friend.twitter %>
+  </div>
+  <div class="card-body">
+    <%= link_to 'Edit', edit_friend_path(@friend), class:"btn btn-dark" %> 
+    <%= link_to 'Delete', @friend, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-dark btn-outline-danger' %>
+    <%= link_to 'Back', friends_path, class:'btn btn-dark' %>
+  </div>
+</div>
